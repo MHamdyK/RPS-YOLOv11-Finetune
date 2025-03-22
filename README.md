@@ -46,10 +46,32 @@ this script will
 . Display the confusion matrix and loss curve (stored in the `runs` folder).
 . Run inference on three random test images and display the predicted outputs.
 
-5. **Package Structure**
-# src/__init__.py
-from .config import SEED, DEVICE, DATASET_ZIP_PATH, EXTRACTED_DATA_DIR, YAML_INPUT_PATH, YAML_OUTPUT_PATH, EPOCHS, IMAGE_SIZE, YOLO_WEIGHTS
-from .data_utils import unzip_dataset, update_yaml_paths
+## Package Structure
+from .config import (
+    SEED,
+    DEVICE,
+    DATASET_ZIP_PATH,
+    EXTRACTED_DATA_DIR,
+    YAML_INPUT_PATH,
+    YAML_OUTPUT_PATH,
+    EPOCHS,
+    IMAGE_SIZE,
+    YOLO_WEIGHTS,
+)
+
+from .data_utils import (
+    unzip_dataset,
+    update_yaml_paths,
+)
+
 from .train import train_model
-from .predict import display_evaluation_images, predict_samples
-from .utils import set_seed, plot_image
+
+from .predict import (
+    display_evaluation_images,
+    predict_samples,
+)
+
+from .utils import (
+    set_seed,
+    plot_image,
+)
